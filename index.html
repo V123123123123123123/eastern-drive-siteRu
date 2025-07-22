@@ -199,16 +199,6 @@
     gap: 20px;
 }
 
-.advantage-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
 .advantage-item:hover {
     background: rgba(255, 77, 0, 0.1); /* Используем orangeHighlight */
     transform: translateY(-3px) scale(1.02); /* Улучшенная анимация */
@@ -470,7 +460,7 @@ margin-right: 6px;
 </div>
 <div class="relative w-full aspect-video md:w-auto md:h-auto flex justify-center items-center">
     <!-- Видео intro.mp4 теперь со звуком и без muted -->
-    <video id="introVideo" controls loop playsinline preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Video+Preview" class="w-full h-full object-cover rounded-lg shadow-xl">
+    <video id="introVideo" controls loop playsinline preload="auto" poster="intro-poster.png" class="w-full h-full object-cover rounded-lg shadow-xl">
         <source src="intro.mp4" type="video/mp4">
         Ваш браузер не поддерживает тег video.
     </video>
@@ -490,7 +480,7 @@ margin-right: 6px;
 <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
 <div class="relative">
 <!-- Видео car1.mp4 -->
-<video controls loop playsinline preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Car+1+Preview" class="w-full h-64 object-cover object-top">
+<video controls loop playsinline preload="auto" poster="car1-poster.png" class="w-full h-64 object-cover object-top">
     <source src="car1.mp4" type="video/mp4">
     Ваш браузер не поддерживает видео.
 </video>
@@ -512,7 +502,7 @@ margin-right: 6px;
 <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
 <div class="relative">
 <!-- Видео car2.mp4 -->
-<video controls loop playsinline preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Car+2+Preview" class="w-full h-64 object-cover object-top">
+<video controls loop playsinline preload="auto" poster="car2-poster.png" class="w-full h-64 object-cover object-top">
     <source src="car2.mp4" type="video/mp4">
     Ваш браузер не поддерживает видео.
 </video>
@@ -535,7 +525,7 @@ margin-right: 6px;
 <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
 <div class="relative">
 <!-- Видео car3.mp4 -->
-<video controls loop playsinline preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Car+3+Preview" class="w-full h-64 object-cover object-top">
+<video controls loop playsinline preload="auto" poster="car3-poster.png" class="w-full h-64 object-cover object-top">
     <source src="car3.mp4" type="video/mp4">
     Ваш браузер не поддерживает видео.
 </video>
@@ -906,7 +896,7 @@ margin-right: 6px;
         <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="carReviewVideoTitle">Видеообзор автомобиля</h2>
         <div class="max-w-full mx-auto bg-white rounded-lg shadow-md overflow-hidden">
             <div style="position: relative; padding-bottom: 56.25%; height: 0;"> <!-- 16:9 Aspect Ratio -->
-                <video controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Review+Video+Preview" class="absolute top-0 left-0 w-full h-full rounded-lg">
+                <video controls preload="auto" poster="review-poster.png" class="absolute top-0 left-0 w-full h-full rounded-lg">
                     <source src="review.mp4" type="video/mp4">
                     Ваш браузер не поддерживает тег video.
                 </video>
@@ -922,7 +912,7 @@ margin-right: 6px;
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo1" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+1+Preview">
+                    <video id="feedbackVideo1" controls preload="auto" poster="feedback1-poster.png">
                         <source src="feedback1.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -935,7 +925,7 @@ margin-right: 6px;
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo2" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+2+Preview">
+                    <video id="feedbackVideo2" controls preload="auto" poster="feedback2-poster.png">
                         <source src="feedback2.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -948,7 +938,7 @@ margin-right: 6px;
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo3" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+3+Preview">
+                    <video id="feedbackVideo3" controls preload="auto" poster="feedback3-poster.png">
                         <source src="feedback3.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -961,7 +951,7 @@ margin-right: 6px;
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo4" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+4+Preview">
+                    <video id="feedbackVideo4" controls preload="auto" poster="feedback4-poster.png">
                         <source src="feedback4.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -974,7 +964,7 @@ margin-right: 6px;
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo5" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+5+Preview">
+                    <video id="feedbackVideo5" controls preload="auto" poster="feedback5-poster.png">
                         <source src="feedback5.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
