@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EasternDrive - Korean Cars Dropshipping</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#FF3B30',
+                    secondary: '#0A84FF',
+                    darkBlue: '#0A1930',
+                    lightGray: '#F9FAFB',
+                    deepBlue: '#1A2B42',
+                    midBlue: '#152236',
+                    orangeHighlight: '#ff4d00'
+                },
+                borderRadius: {
+                    'none': '0px',
+                    'sm': '4px',
+                    DEFAULT: '8px',
+                    'md': '12px',
+                    'lg': '16px',
+                    'xl': '20px',
+                    '2xl': '24px',
+                    '3xl': '32px',
+                    'full': '9999px',
+                    'button': '8px'
+                }
+            }
+        }
+    }
+</script>
+<style>
+/* Базовый сброс (минимальный, Tailwind обрабатывает большую часть) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Пользовательские стили для интегрированных разделов "Как это работает" и "Преимущества" */
+.process-container {
+    background: #0A1930; /* Используем darkBlue из конфигурации Tailwind */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.process-header {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+}
+
+.process-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.process-header p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #b8c4d1; /* Пользовательский светло-серый для текста */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.steps-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.step-card {
+    background: linear-gradient(135deg, #1A2B42 0%, #152236 100%); /* Используем deepBlue и midBlue */
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 77, 0, 0.15); /* Используем основной цвет */
+    border-color: #ff4d00; /* Используем orangeHighlight */
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    background: linear-gradient(135deg, #ff4d00, #ff6a2b); /* Используем оттенки orangeHighlight */
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(255, 77, 0, 0.4); /* Используем orangeHighlight */
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.step-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.step-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #b8c4d1; /* Пользовательский светло-серый */
+}
+
+.step-sublist {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.step-sublist li {
+    list-style: none;
+    position: relative;
+    margin-bottom: 8px;
+    color: #9aa5b3; /* Пользовательский серый */
+}
+
+.step-sublist li:before {
+    content: "•";
+    color: #ff4d00; /* Используем orangeHighlight */
+    position: absolute;
+    left: -15px;
+    font-weight: bold;
+}
+
+.advantages-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #1A2B42 0%, #152236 100%); /* Используем deepBlue и midBlue */
+    border-radius: 20px;
+    padding: 40px;
+    border: 2px solid #ff4d00; /* Используем orangeHighlight */
+    position: relative;
+    overflow: hidden;
+}
+
+.advantages-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff4d00, #ff6a2b, #ff4d00); /* Используем оттенки orangeHighlight */
+}
+
+.advantages-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.advantages-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.advantage-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.advantage-item:hover {
+    background: rgba(255, 77, 0, 0.1); /* Используем orangeHighlight */
+    transform: translateY(-3px) scale(1.02); /* Улучшенная анимация */
+    box-shadow: 0 10px 20px rgba(255, 77, 0, 0.2); /* Улучшенная тень */
+}
+
+.advantage-icon {
+    width: 8px;
+    height: 8px;
+    background: #ff4d00; /* Используем orangeHighlight */
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.advantage-text {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .process-container {
+        padding: 40px 15px;
+    }
+
+    .process-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .process-header p {
+        font-size: 1.1rem;
+    }
+
+    .steps-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .step-card {
+        padding: 25px;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .step-icon {
+        font-size: 2rem;
+    }
+
+    .step-title {
+        font-size: 1.3rem;
+    }
+
+    .advantages-section {
+        padding: 30px 20px;
+    }
+
+    .advantages-header h2 {
+        font-size: 1.6rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .process-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .step-card {
+        padding: 20px;
+    }
+
+    .advantages-section {
+        padding: 25px 15px;
+    }
+}
+
+
+/* Существующие стили на основе Tailwind и переопределения */
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.language-selector .language-dropdown {
+display: none;
+opacity: 0;
+transform: translateY(-10px);
+transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.language-selector .language-dropdown.active {
+display: block;
+opacity: 1;
+transform: translateY(0);
+}
+.flag {
+width: 24px;
+height: 16px;
+display: inline-block;
+background-size: cover;
+margin-right: 6px;
+}
+.flag-en { background-image: url('https://readdy.ai/api/search-image?query=UK%20flag%20minimalist%20design&width=24&height=16&seq=1&orientation=landscape'); }
+.flag-es { background-image: url('https://readdy.ai/api/search-image?query=Spain%20flag%20minimalist%20design&width=24&height=16&seq=2&orientation=landscape'); }
+.flag-cn { background-image: url('https://readdy.ai/api/search-image?query=China%20flag%20minimalist%20design&width=24&height=16&seq=3&orientation=landscape'); }
+.flag-kr { background-image: url('https://readdy.ai/api/search-image?query=South%20Korea%20flag%20minimalist%20design&width=24&height=16&seq=4&orientation=landscape'); }
+.flag-ru { background-image: url('https://readdy.ai/api/search-image?query=Russia%20flag%20minimalist%20design&width=24&height=16&seq=5&orientation=landscape'); }
+.hero-section {
+    background-image: url('hero-background.jpg'); /* Фоновое изображение */
+    background-color: #0A1930; /* Фоновый цвет на случай, если изображение не загрузится */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Стили для контейнера видеоотзывов */
+.feedback-video-container {
+    position: relative;
+    width: 100%;
+    /* Используем padding-top для поддержания соотношения сторон 16:9 */
+    padding-top: 56.25%; /* 9 / 16 * 100% */
+    overflow: hidden;
+    border-radius: 0.375rem; /* rounded-md */
+}
+
+.feedback-video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feedback-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 59, 48, 0.8); /* primary color with opacity */
+    border-radius: 50%;
+    width: 3rem; /* w-12 */
+    height: 3rem; /* h-12 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem; /* ri-xl */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-play-button:hover {
+    background-color: rgba(255, 59, 48, 1);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.feedback-play-button.hidden {
+    display: none;
+}
+
+/* Стили для FAQ */
+.faq-item summary {
+    cursor: pointer;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.125rem; /* text-lg */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    content: '-';
+    transform: rotate(0deg);
+}
+
+.faq-item-content {
+    padding: 0 1rem 1rem 1rem;
+    line-height: 1.6;
+    color: #4b5563; /* text-gray-600 */
+}
+</style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+<header class="bg-white shadow-sm">
+<div class="container mx-auto px-4 py-3 max-w-7xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<a href="/" class="flex items-center">
+<img src="https://static.readdy.ai/image/fd34bae5c16d4d7e6e59a59a5218d2c5/b99d239978876b2b8ce81e2aa5d5110b.png" alt="EasternDrive" class="h-10"> <!-- Изменено с h-8 на h-10 -->
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<div class="language-selector relative">
+<div id="languageToggle" class="flex items-center cursor-pointer p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+<span class="flag flag-ru" data-lang-flag="ru"></span>
+<span data-lang-text="ru">RU</span>
+<div class="w-5 h-5 flex items-center justify-center ml-1">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+<div id="languageDropdown" class="language-dropdown absolute top-full right-0 mt-1 bg-white shadow-lg rounded py-2 w-32 z-10">
+<a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100" data-lang="en">
+<span class="flag flag-en"></span>
+<span>English</span>
+</a>
+<a href="#" class="flex items-center px-4 py-2 hover:bg-gray-100" data-lang="ru">
+<span class="flag flag-ru"></span>
+<span>Русский</span>
+</a>
+</div>
+</div>
+<nav>
+<ul class="flex space-x-6">
+<!-- Убран пункт "Каталог" -->
+<li><a href="#advantages" class="hover:text-primary transition-colors" data-lang-key="advantages">Преимущества</a></li>
+<li><a href="#how-it-works-new" class="hover:text-primary transition-colors" data-lang-key="howItWorks">Как это работает</a></li>
+<li><a href="#faq-section" class="hover:text-primary transition-colors" data-lang-key="faq">FAQ</a></li> <!-- Обновлена ссылка на FAQ -->
+<li><a href="/contacts" class="hover:text-primary transition-colors" data-lang-key="contacts">Контакты</a></li>
+</ul>
+</nav>
+<a href="https://web.telegram.org/k/#@EvgeniDrive" class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all" data-lang-key="selectCar">Подобрать авто</a>
+</div>
+<div class="md:hidden w-10 h-10 flex items-center justify-center">
+<button type="button" class="text-gray-600">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</div>
+</header>
+<section class="hero-section relative py-20 md:py-24">
+<div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-transparent"></div>
+<div class="container mx-auto px-4 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-7xl">
+<div class="max-w-2xl text-white">
+<h1 class="text-4xl md:text-5xl font-bold mb-4" data-lang-key="heroTitle">Доставка Автомобилей прямо из Кореи</h1>
+<p class="text-xl mb-8" data-lang-key="heroSubtitle">Экономьте до 30% на покупке — без скрытых комиссий и наценок</p>
+<div class="flex flex-wrap gap-4">
+<a href="https://web.telegram.org/k/#@EvgeniDrive" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all" data-lang-key="writeManager">Написать менеджеру</a>
+<a href="https://t.me/DriveVostoka" class="bg-white text-gray-800 px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all" data-lang-key="telegramChannel">Наш Telegram-канал</a>
+</div>
+</div>
+<div class="relative w-full aspect-video md:w-auto md:h-auto flex justify-center items-center">
+    <!-- Видео intro.mp4 теперь со звуком и без muted -->
+    <video id="introVideo" controls loop playsinline preload="auto" class="w-full h-full object-cover rounded-lg shadow-xl">
+        <source src="intro.mp4" type="video/mp4">
+        Ваш браузер не поддерживает тег video.
+    </video>
+    <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <button id="playPauseButton" class="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white text-3xl hover:scale-110 transition-transform">
+            <i class="ri-play-fill"></i>
+        </button>
+    </div>
+    <p class="absolute bottom-2 left-3 text-white text-sm" data-lang-key="videoReviewText">обзор 16.9</p>
+</div>
+</div>
+</section>
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4 max-w-7xl">
+<h2 class="text-3xl font-bold text-center mb-12" data-lang-key="featuredModelsTitle">Представленные модели</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
+<div class="relative">
+<!-- Видео car1.mp4 -->
+<video controls loop playsinline preload="auto" class="w-full h-64 object-cover object-top">
+    <source src="car1.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+</video>
+<div class="absolute top-4 left-4 bg-red-500 text-white text-sm px-3 py-1 rounded-full" data-lang-key="newArrival">Новое поступление</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-4">Mercedes G400d 4MATIC</h3>
+<div class="text-sm text-gray-800 space-y-1">
+    <p>🔹Год: 2021/02</p>
+    <p>🔹Пробег: 28 100 км</p>
+    <p>🔹Двигатель: 3.0 дизель</p>
+    <p>Автомобиль без страховых случаев, небольшой пробег</p>
+    <p>Цена со всеми документами и доставкой:</p>
+    <p class="font-bold text-lg">15 700 000 в г. Тюмень</p>
+</div>
+<a href="https://t.me/DriveVostoka" class="block w-full bg-primary text-white text-center py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all mt-4" data-lang-key="details">Подробнее</a>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
+<div class="relative">
+<!-- Видео car2.mp4 -->
+<video controls loop playsinline preload="auto" class="w-full h-64 object-cover object-top">
+    <source src="car2.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+</video>
+<!-- Удалена надпись "Бестселлер" -->
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-4">Kia Sorento</h3>
+<div class="text-sm text-gray-800 space-y-1">
+    <p>🔹Год: 2024/11</p>
+    <p>🔹Пробег: 6289 км</p>
+    <p>🔹Двигатель: 1.6 Hybrid</p>
+    <p>🛠 Автомобиль из Ю. Кореи, без страховых случаев</p>
+    <p>💰 Цена автомобиля со всеми документами и доставкой:</p>
+    <p class="font-bold text-lg">- 5 446 000 в г. Тюмень</p>
+    <p class="font-bold text-lg">- 5 476 000 в г. Воронеж/Краснодар</p>
+</div>
+<a href="https://t.me/DriveVostoka" class="block w-full bg-primary text-white text-center py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all mt-4" data-lang-key="details">Подробнее</a>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
+<div class="relative">
+<!-- Видео car3.mp4 -->
+<video controls loop playsinline preload="auto" class="w-full h-64 object-cover object-top">
+    <source src="car3.mp4" type="video/mp4">
+    Ваш браузер не поддерживает видео.
+</video>
+<!-- Удалена надпись "Электромобиль" -->
+</div>
+<div class="p-6">
+<h3 class="text-xl font-bold mb-4">⚡️Hyundai Staria 2WD</h3>
+<div class="text-sm text-gray-800 space-y-1">
+    <p>🔹Год: 2021/04</p>
+    <p>🔹Пробег: 79 800 км</p>
+    <p>🔹Двигатель: 2,2Т дизель</p>
+    <p>🛠 9 местный автомобиль без страховых случаев, в хорошей комплектации</p>
+    <p>💰 Цена автомобиля со всеми документами и доставкой:</p>
+    <p class="font-bold text-lg">- 3 496 000 в г. Тюмень</p>
+    <p class="font-bold text-lg">- 3 526 000 в г. Краснодар/ г. Воронеж</p>
+</div>
+<a href="https://t.me/DriveVostoka" class="block w-full bg-primary text-white text-center py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all mt-4" data-lang-key="details">Подробнее</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Большая круглая кнопка после второго блока -->
+<section class="py-8 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl text-center">
+        <a href="https://t.me/DriveVostoka" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center bg-primary text-white rounded-full px-8 py-4 text-lg font-bold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <i class="ri-telegram-fill mr-3 text-2xl"></i>
+            <span data-lang-key="telegramButton1">Самая актуальная информация в нашем Telegram-канале</span>
+        </a>
+    </div>
+</section>
+
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4 max-w-7xl">
+<h2 class="text-3xl font-bold text-center mb-4" data-lang-key="whyKoreaTitle">Почему Корея?</h2>
+<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto" data-lang-key="whyKoreaSubtitle">Корейская автомобильная промышленность известна своим качеством, инновациями и стоимостью</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 justify-items-center">
+<div class="bg-white p-6 rounded-lg shadow-sm text-center w-full max-w-[250px]">
+<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-blue-50 rounded-full">
+<i class="ri-award-line ri-2x text-primary"></i>
+</div>
+<h3 class="font-bold text-lg mb-2" data-lang-key="legendaryQualityTitle">Легендарное Качество</h3>
+<p class="text-gray-600" data-lang-key="legendaryQualityText">🇰🇷 Известная надежность и качество сборки, выдерживающие испытание временем</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm text-center w-full max-w-[250px]">
+<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-blue-50 rounded-full">
+<i class="ri-cpu-line ri-2x text-primary"></i>
+</div>
+<h3 class="font-bold text-lg mb-2" data-lang-key="modernTechTitle">Современные Технологии</h3>
+<p class="text-gray-600" data-lang-key="modernTechText">Богатый функционал и передовые технологии даже в базовых комплектациях</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm text-center w-full max-w-[250px]">
+<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-blue-50 rounded-full">
+<i class="ri-money-dollar-circle-line ri-2x text-primary"></i>
+</div>
+<h3 class="font-bold text-lg mb-2" data-lang-key="bestPricesTitle">Лучшие Цены</h3>
+<p class="text-gray-600" data-lang-key="bestPricesText">📉 Более конкурентоспособные цены по сравнению с европейскими и американскими рынками</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm text-center w-full max-w-[250px]">
+<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-blue-50 rounded-full">
+<i class="ri-file-list-3-line ri-2x text-primary"></i>
+</div>
+<h3 class="font-bold text-lg mb-2" data-lang-key="transparentHistoryTitle">Прозрачная История</h3>
+<p class="text-gray-600" data-lang-key="transparentHistoryText">💯 Чистая история автомобиля и высокие стандарты обслуживания</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm text-center w-full max-w-[250px]">
+<div class="w-16 h-16 flex items-center justify-center mx-auto mb-4 bg-blue-50 rounded-full">
+<i class="ri-check-double-line ri-2x text-primary"></i>
+</div>
+<h3 class="font-bold text-lg mb-2" data-lang-key="fullSupportTitle">Полная Поддержка</h3>
+<p class="text-gray-600" data-lang-key="fullSupportText">Обеспечиваем полное сопровождение от выбора до доставки авто</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4 max-w-7xl">
+<h2 class="text-3xl font-bold text-center mb-4" data-lang-key="dropshippingTitle">Что такое Авто Дропшиппинг?</h2>
+<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto" data-lang-key="dropshippingSubtitle">💡 Мы исключили посредников и склады. Автомобили доставляются напрямую от корейских продавцов к вам.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center mb-4 bg-green-50 rounded-full">
+<i class="ri-money-dollar-circle-line ri-xl text-green-600"></i>
+</div>
+<h3 class="font-bold text-lg mb-4" data-lang-key="economyTitle">Экономия</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="economyItem1">Без расходов на парковку</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="economyItem2">Без наценок дилеров</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="economyItem3">Прямой экспорт = честная цена</span>
+</li>
+</ul>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center mb-4 bg-blue-50 rounded-full">
+<i class="ri-file-search-line ri-xl text-blue-600"></i>
+</div>
+<h3 class="font-bold text-lg mb-4" data-lang-key="transparencyTitle">Прозрачность</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="transparencyItem1">Доступ к истории перед покупкой</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="transparencyItem2">Проверка пробега и состояния</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="transparencyItem3">Полный просмотр документации</span>
+</li>
+</ul>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+<div class="w-12 h-12 flex items-center justify-center mb-4 bg-purple-50 rounded-full">
+<i class="ri-settings-line ri-xl text-purple-600"></i>
+</div>
+<h3 class="font-bold text-lg mb-4" data-lang-key="flexibilityTitle">Гибкость</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="flexibilityItem1">Индивидуальные заказы под ваш бюджет</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="flexibilityItem2">От эконом до премиум моделей</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="flexibilityItem3">Полная онлайн-транзакция доступна</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 max-w-xl mx-auto">
+<div class="w-12 h-12 flex items-center justify-center mb-4 bg-amber-50 rounded-full mx-auto">
+<i class="ri-customer-service-2-line ri-xl text-amber-600"></i>
+</div>
+<h3 class="font-bold text-lg mb-4 text-center" data-lang-key="convenienceTitle">Удобство</h3>
+<ul class="space-y-3 max-w-md mx-auto">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="convenienceItem1">Персональный менеджер на каждом этапе</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span data-lang-key="convenienceItem2">Фото/видео отчеты, тесты и живое общение</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Большая круглая кнопка после четвертого блока -->
+<section class="py-8 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl text-center">
+        <a href="https://t.me/DriveVostoka" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center bg-primary text-white rounded-full px-8 py-4 text-lg font-bold hover:bg-opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <i class="ri-telegram-fill mr-3 text-2xl"></i>
+            <span data-lang-key="telegramButton2">Самая актуальная информация в нашем Telegram-канале</span>
+        </a>
+    </div>
+</section>
+
+<section id="how-it-works-new" class="process-container">
+    <div class="process-header">
+        <h1 data-lang-key="howItWorksSectionTitle">Как всё работает</h1>
+        <p data-lang-key="howItWorksSectionSubtitle">Мы выстроили прозрачную и надёжную систему, чтобы вы могли покупать автомобили из Кореи без рисков и скрытых этапов. Вот как проходит каждый шаг:</p>
+    </div>
+
+    <div class="steps-container">
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">📨</div>
+            <h3 class="step-title" data-lang-key="step1Title">Вы обращаетесь к менеджеру</h3>
+            <p class="step-description" data-lang-key="step1Description">Связываетесь с нашим специалистом для консультации и обсуждения ваших потребностей в выборе автомобиля.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">🔍</div>
+            <h3 class="step-title" data-lang-key="step2Title">Поиск оптимальных предложений</h3>
+            <p class="step-description" data-lang-key="step2Description">Наши эксперты находят лучшие варианты автомобилей, соответствующие вашему бюджету и требованиям.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon">📋</div>
+            <h3 class="step-title" data-lang-key="step3Title">Согласование и выезд эксперта</h3>
+            <p class="step-description" data-lang-key="step3Description">После выбора подходящих вариантов наш эксперт выезжает для осмотра автомобилей на местах.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-icon">✅</div>
+            <h3 class="step-title" data-lang-key="step4Title">Первичный осмотр и ваше подтверждение</h3>
+            <p class="step-description" data-lang-key="step4Description">Проводим базовую проверку состояния автомобиля и согласовываем с вами дальнейшие действия.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-icon">🔬</div>
+            <h3 class="step-title" data-lang-key="step5Title">Углублённая диагностика автомобиля</h3>
+            <p class="step-description" data-lang-key="step5Description">Комплексная проверка технического состояния включает:</p>
+            <ul class="step-sublist">
+                <li data-lang-key="step5Item1">5 детальных видеообзоров</li>
+                <li data-lang-key="step5Item2">Фотоотчет всех узлов</li>
+                <li data-lang-key="step5Item3">Компьютерная диагностика</li>
+                <li data-lang-key="step5Item4">Экспертное заключение</li>
+            </ul>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">6</div>
+            <div class="step-icon">💰</div>
+            <h3 class="step-title" data-lang-key="step6Title">Выкуп автомобиля</h3>
+            <p class="step-description" data-lang-key="step6Description">После вашего окончательного согласия оформляем покупку автомобиля у корейского продавца.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">7</div>
+            <div class="step-icon">📦</div>
+            <h3 class="step-title" data-lang-key="step7Title">Отправка и растаможка</h3>
+            <p class="step-description" data-lang-key="step7Description">Организуем доставку автомобиля морским транспортом и проходим все таможенные процедуры.</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">8</div>
+            <div class="step-icon">🏁</div>
+            <h3 class="step-title" data-lang-key="step8Title">Доставка в ваш город</h3>
+            <p class="step-description" data-lang-key="step8Description">Доставляем автомобиль до вашего города и передаем вам со всеми необходимыми документами.</p>
+        </div>
+
+        <!-- Новый пункт 9 -->
+        <div class="step-card">
+            <div class="step-number">9</div>
+            <div class="step-icon">🤝</div> <!-- Иконка для поддержки -->
+            <h3 class="step-title" data-lang-key="step9Title">Поддержка на протяжении всей сделки</h3>
+            <p class="step-description" data-lang-key="step9Description">Наши менеджеры всегда на связи, предоставляя полную поддержку на каждом этапе сделки.</p>
+        </div>
+    </div>
+
+    <div class="advantages-section" id="advantages">
+        <div class="advantages-header">
+            <h2 data-lang-key="whyChooseUsTitle"><span>🎯</span> Почему выбирают нас:</h2>
+        </div>
+        <div class="advantages-grid lg:grid-cols-5"> <!-- Изменено для попытки симметрии 5 элементов -->
+            <div class="advantage-item">
+                <div class="advantage-icon"></div>
+                <span class="advantage-text" data-lang-key="advantage1">Полная прозрачность сделки</span>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon"></div>
+                <span class="advantage-text" data-lang-key="advantage2">Работа без посредников</span>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon"></div>
+                <span class="advantage-text" data-lang-key="advantage3">Глубокая диагностика</span>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon"></div>
+                <span class="advantage-text" data-lang-key="advantage4">Поддержка на всех этапах</span>
+            </div>
+            <div class="advantage-item">
+                <div class="advantage-icon"></div>
+                <span class="advantage-text" data-lang-key="advantage5">Экономия до 30%</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4 max-w-7xl">
+<h2 class="text-3xl font-bold text-center mb-12" data-lang-key="ourServicesTitle">Наши услуги включают</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-blue-50 rounded-full shrink-0">
+<i class="ri-search-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2" data-lang-key="service1Title">Поиск и инспекция автомобиля</h3>
+<p class="text-gray-600" data-lang-key="service1Description">Поиск идеального автомобиля, соответствующего вашим требованиям</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-blue-50 rounded-full shrink-0">
+<i class="ri-movie-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2" data-lang-key="service2Title">Видеообзор и анализ</h3>
+<p class="text-gray-600" data-lang-key="service2Description">Детальный видеоосмотр и техническая оценка</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-blue-50 rounded-full shrink-0">
+<i class="ri-file-list-3-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2" data-lang-key="service3Title">Поддержка с документацией</h3>
+<p class="text-gray-600" data-lang-key="service3Description">Полное управление документацией для беспроблемного процесса</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-blue-50 rounded-full shrink-0">
+<i class="ri-government-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2" data-lang-key="service4Title">Таможенное оформление</h3>
+<p class="text-gray-600" data-lang-key="service4Description">Обработка всех таможенных формальностей и требований</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-blue-50 rounded-full shrink-0">
+<i class="ri-ship-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2" data-lang-key="service5Title">Доставка и логистика</h3>
+<p class="text-gray-600" data-lang-key="service5Description">Безопасная и эффективная транспортировка до вашего местоположения</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center mr-4 bg-blue-50 rounded-full shrink-0">
+<i class="ri-question-answer-line text-primary"></i>
+</div>
+<div>
+<h3 class="font-bold mb-2" data-lang-key="service6Title">Помощь с регистрацией</h3>
+<p class="text-gray-600" data-lang-key="service6Description">Руководство по регистрации вашего автомобиля в вашей стране</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Новый блок с видеообзором автомобиля -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-4xl"> <!-- Уменьшен max-w для видеообзора -->
+        <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="carReviewVideoTitle">Видеообзор автомобиля</h2>
+        <div class="max-w-full mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0;"> <!-- 16:9 Aspect Ratio -->
+                <video controls preload="auto" class="absolute top-0 left-0 w-full h-full rounded-lg">
+                    <source src="review.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает тег video.
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Новый блок с отзывами клиентов -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="customerReviewsTitle">Отзывы клиентов</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <div class="feedback-video-container">
+                    <video id="feedbackVideo1" controls preload="auto">
+                        <source src="feedback1.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <button class="feedback-play-button" data-video-id="feedbackVideo1">
+                        <i class="ri-play-fill"></i>
+                    </button>
+                </div>
+                <h3 class="font-bold text-lg mb-2 mt-4" data-lang-key="review1Name">Наталья Н.</h3>
+                <p class="text-gray-600" data-lang-key="review1Text">"Очень доволена сервисом! Автомобиль пришел точно в срок, без каких-либо проблем. Менеджер всегда был на связи."</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <div class="feedback-video-container">
+                    <video id="feedbackVideo2" controls preload="auto">
+                        <source src="feedback2.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <button class="feedback-play-button" data-video-id="feedbackVideo2">
+                        <i class="ri-play-fill"></i>
+                    </button>
+                </div>
+                <h3 class="font-bold text-lg mb-2 mt-4" data-lang-key="review2Name">Елена С.</h3>
+                <p class="text-gray-600" data-lang-key="review2Text">"Прозрачность сделки на высшем уровне. Все этапы были понятны, и я получила именно то, что хотела. Рекомендую!"</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <div class="feedback-video-container">
+                    <video id="feedbackVideo3" controls preload="auto">
+                        <source src="feedback3.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <button class="feedback-play-button" data-video-id="feedbackVideo3">
+                        <i class="ri-play-fill"></i>
+                    </button>
+                </div>
+                <h3 class="font-bold text-lg mb-2 mt-4" data-lang-key="review3Name">Алексей П.</h3>
+                <p class="text-gray-600" data-lang-key="review3Text">"Отличная компания! Помогли выбрать автомобиль, провели полную диагностику. Очень благодарен за профессионализм."</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <div class="feedback-video-container">
+                    <video id="feedbackVideo4" controls preload="auto">
+                        <source src="feedback4.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <button class="feedback-play-button" data-video-id="feedbackVideo4">
+                        <i class="ri-play-fill"></i>
+                    </button>
+                </div>
+                <h3 class="font-bold text-lg mb-2 mt-4" data-lang-key="review4Name">Алексей Д.</h3>
+                <p class="text-gray-600" data-lang-key="review4Text">"Быстрая доставка и никаких скрытых платежей. Очень удобно и выгодно. Буду обращаться снова!"</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
+                <div class="feedback-video-container">
+                    <video id="feedbackVideo5" controls preload="auto">
+                        <source src="feedback5.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <button class="feedback-play-button" data-video-id="feedbackVideo5">
+                        <i class="ri-play-fill"></i>
+                    </button>
+                </div>
+                <h3 class="font-bold text-lg mb-2 mt-4" data-lang-key="review5Name">Дмитрий В.</h3>
+                <p class="text-gray-600" data-lang-key="review5Text">"Сначала сомневался в дропшиппинге, но EasternDrive развеяли все сомнения. Машина в идеальном состоянии. Спасибо!"</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Новый раздел FAQ -->
+<section id="faq-section" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="faqTitle">Часто задаваемые вопросы</h2>
+        <div class="space-y-4 max-w-3xl mx-auto">
+            <details class="bg-white p-6 rounded-lg shadow-sm faq-item">
+                <summary class="text-lg font-semibold text-gray-800">
+                    <span data-lang-key="faqQ1">Что такое автодропшиппинг из Кореи?</span>
+                </summary>
+                <div class="faq-item-content">
+                    <p data-lang-key="faqA1">Автодропшиппинг — это модель покупки, при которой автомобиль доставляется напрямую от продавца в Южной Корее к конечному покупателю, минуя посредников и склады в стране назначения. Это позволяет значительно снизить стоимость автомобиля за счет отсутствия дополнительных наценок и расходов на хранение.</p>
+                </div>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm faq-item">
+                <summary class="text-lg font-semibold text-gray-800">
+                    <span data-lang-key="faqQ2">Насколько это безопасно?</span>
+                </summary>
+                <div class="faq-item-content">
+                    <p data-lang-key="faqA2">Мы обеспечиваем полную прозрачность сделки. Каждый автомобиль проходит многоступенчатую проверку и диагностику в Корее, включая детальные фото- и видеоотчеты, компьютерную диагностику и проверку истории. Все этапы сделки документируются, и вы всегда в курсе процесса.</p>
+                </div>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm faq-item">
+                <summary class="text-lg font-semibold text-gray-800">
+                    <span data-lang-key="faqQ3">Какие автомобили можно заказать?</span>
+                </summary>
+                <div class="faq-item-content">
+                    <p data-lang-key="faqA3">Мы работаем со всеми популярными корейскими марками (Hyundai, Kia, Genesis) и моделями, а также можем найти автомобили других производителей, представленных на корейском рынке. Вы можете заказать как новые, так и подержанные автомобили.</p>
+                </div>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm faq-item">
+                <summary class="text-lg font-semibold text-gray-800">
+                    <span data-lang-key="faqQ4">Сколько времени занимает доставка?</span>
+                </summary>
+                <div class="faq-item-content">
+                    <p data-lang-key="faqA4">Срок доставки зависит от выбранного способа (морской или авиафрахт) и конечного пункта назначения. Обычно морская доставка занимает от 4 до 6 недель, а авиадоставка — от 1 до 2 недель. Точные сроки будут согласованы при оформлении заказа.</p>
+                </div>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm faq-item">
+                <summary class="text-lg font-semibold text-gray-800">
+                    <span data-lang-key="faqQ5">Какие документы нужны для оформления?</span>
+                </summary>
+                <div class="faq-item-content">
+                    <p data-lang-key="faqA5">Для оформления заказа и доставки потребуются ваш паспорт, ИНН, а также информация о желаемом автомобиле. Все остальные документы, связанные с экспортом, импортом и таможенным оформлением, мы берем на себя.</p>
+                </div>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm faq-item">
+                <summary class="text-lg font-semibold text-gray-800">
+                    <span data-lang-key="faqQ6">Включена ли растаможка в стоимость?</span>
+                </summary>
+                <div class="faq-item-content">
+                    <p data-lang-key="faqA6">Да, цена, которую мы указываем, включает в себя все расходы, включая стоимость автомобиля, доставку, таможенные пошлины и оформление всех необходимых документов до вашего города. Никаких скрытых платежей.</p>
+                </div>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm faq-item">
+                <summary class="text-lg font-semibold text-gray-800">
+                    <span data-lang-key="faqQ7">Можно ли отслеживать процесс доставки?</span>
+                </summary>
+                <div class="faq-item-content">
+                    <p data-lang-key="faqA7">Конечно! Мы предоставляем полный трекинг на всех этапах доставки. Вы будете получать регулярные обновления о статусе вашего автомобиля, от момента покупки до прибытия в ваш город.</p>
+                </div>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm faq-item">
+                <summary class="text-lg font-semibold text-gray-800">
+                    <span data-lang-key="faqQ8">Что если автомобиль придет с дефектами?</span>
+                </summary>
+                <div class="faq-item-content">
+                    <p data-lang-key="faqA8">Перед покупкой каждый автомобиль проходит тщательную проверку нашими экспертами. Мы предоставляем подробные отчеты о состоянии автомобиля. В случае обнаружения скрытых дефектов, которые не были указаны в отчете, мы несем ответственность и обеспечиваем решение проблемы.</p>
+                </div>
+            </details>
+            <details class="bg-white p-6 rounded-lg shadow-sm faq-item">
+                <summary class="text-lg font-semibold text-gray-800">
+                    <span data-lang-key="faqQ9">Как начать процесс покупки?</span>
+                </summary>
+                <div class="faq-item-content">
+                    <p data-lang-key="faqA9">Для начала просто свяжитесь с нашим менеджером через Telegram или оставьте заявку на сайте. Мы проведем бесплатную консультацию, поможем подобрать автомобиль и ответим на все ваши вопросы.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 bg-[#0A1930]">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-white mb-4" data-lang-key="joinUsTitle">Присоединяйтесь к нам</h2>
+      <p class="text-gray-400 mb-8" data-lang-key="joinUsSubtitle">
+        Остались вопросы или хотите увидеть все актуальные предложения первым?<br>
+        Свяжитесь с нашим менеджером — он подскажет лучший вариант под ваш бюджет.<br>
+        Или подпишитесь на наш Telegram-канал, где ежедневно публикуются новые авто, а также советы и инсайты о покупке машин из Кореи.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://web.telegram.org/k/#@EvgeniDrive" target="_blank" rel="noopener noreferrer" class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all flex items-center justify-center" data-lang-key="writeManagerFooter">
+          <i class="ri-mail-line mr-2"></i>
+          Написать менеджеру
+        </a>
+        <a href="https://t.me/DriveVostoka" target="_blank" rel="noopener noreferrer" class="bg-white border border-primary text-primary px-8 py-3 !rounded-button whitespace-nowrap hover:bg-primary hover:bg-opacity-5 transition-all flex items-center justify-center" data-lang-key="telegramChannelFooter">
+          <i class="ri-telegram-line mr-2"></i>
+          Наш Telegram-канал
+        </a>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6 mt-8">
+        <div class="flex items-center text-gray-400">
+          <i class="ri-checkbox-circle-fill text-primary mr-2"></i>
+          <span data-lang-key="benefit1">Персональная консультация</span>
+        </div>
+        <div class="flex items-center text-gray-400">
+          <i class="ri-checkbox-circle-fill text-primary mr-2"></i>
+          <span data-lang-key="benefit2">Свежие предложения ежедневно</span>
+        </div>
+        <div class="flex items-center text-gray-400">
+          <i class="ri-checkbox-circle-fill text-primary mr-2"></i>
+          <span data-lang-key="benefit3">Эксклюзивные скидки</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4 max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<a href="/" class="inline-block mb-4">
+<img src="https://static.readdy.ai/image/fd34bae5c16d4d7e6e59a59a5218d2c5/b99d239978876b2b8ce81e2aa5d5110b.png" alt="EasternDrive" class="h-8 brightness-200">
+</a>
+<p class="text-gray-400 mb-4" data-lang-key="footerDescription">Сервис дропшиппинга корейских автомобилей</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-facebook-fill"></i>
+</div>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-instagram-line"></i>
+</div>
+</a>
+<a href="https://t.me/DriveVostoka" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-telegram-fill"></i>
+</div>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-whatsapp-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4" data-lang-key="quickLinksTitle">Быстрые ссылки</h3>
+<ul class="space-y-2">
+<li><a href="/catalog" class="text-gray-400 hover:text-white transition-colors" data-lang-key="catalogFooter">Каталог</a></li>
+<li><a href="#how-it-works-new" class="text-gray-400 hover:text-white transition-colors" data-lang-key="howItWorksFooter">Как это работает</a></li>
+<li><a href="#faq-section" class="text-gray-400 hover:text-white transition-colors" data-lang-key="faqFooter">FAQ</a></li> <!-- Обновлена ссылка на FAQ -->
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4" data-lang-key="contactUsTitle">Свяжитесь с нами</h3>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-gray-400">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">info@easterndrive.xyz</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-gray-400">
+<i class="ri-telegram-line"></i>
+</div>
+<span class="text-gray-400">@easterndrive</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-2 mt-0.5 text-gray-400">
+<i class="ri-whatsapp-line"></i>
+</div>
+<span class="text-gray-400">+82 10 1234 5678</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-bold mb-4" data-lang-key="weAcceptTitle">Мы принимаем</h3>
+<div class="grid grid-cols-3 gap-4">
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded p-1">
+<i class="ri-visa-fill ri-lg text-blue-700"></i>
+</div>
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded p-1">
+<i class="ri-mastercard-fill ri-lg text-orange-600"></i>
+</div>
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded p-1">
+<i class="ri-paypal-fill ri-lg text-blue-600"></i>
+</div>
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded p-1">
+<i class="ri-bank-card-fill ri-lg text-gray-700"></i>
+</div>
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded p-1">
+<i class="ri-alipay-fill ri-lg text-blue-500"></i>
+</div>
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded p-1">
+<i class="ri-wechat-pay-fill ri-lg text-green-600"></i>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+<p data-lang-key="copyright">© 2025 EasternDrive. Все права защищены.</p>
+</div>
+</div>
+</footer>
+
+<script id="mobileMenuScript">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('.md\\:hidden button');
+if (menuButton) {
+menuButton.addEventListener('click', function() {
+console.log('Mobile menu toggled');
+});
+}
+});
+</script>
+<script id="languageScript">
+document.addEventListener('DOMContentLoaded', function() {
+    const languageToggle = document.getElementById('languageToggle');
+    const languageDropdown = document.getElementById('languageDropdown');
+    const htmlElement = document.documentElement;
+
+    // Define translations for key elements
+    const translations = {
+        'ru': {
+            'catalog': 'Каталог',
+            'advantages': 'Преимущества',
+            'howItWorks': 'Как это работает',
+            'faq': 'FAQ',
+            'contacts': 'Контакты',
+            'selectCar': 'Подобрать авто',
+            'heroTitle': 'Доставка Автомобилей прямо из Кореи',
+            'heroSubtitle': 'Экономьте до 30% на покупке — без скрытых комиссий и наценок',
+            'writeManager': 'Написать менеджеру',
+            'telegramChannel': 'Наш Telegram-канал',
+            'videoReviewText': 'обзор 16.9',
+            'featuredModelsTitle': 'Представленные модели',
+            'newArrival': 'Новое поступление',
+            'bestseller': 'Бестселлер', // Оставлено для перевода, но элемент удален
+            'electricCar': 'Электромобиль', // Оставлено для перевода, но элемент удален
+            'engine': 'Двигатель',
+            'mileage': 'Пробег',
+            'power': 'Мощность',
+            'transmission': 'Трансмиссия',
+            'battery': 'Батарея',
+            'range': 'Запас хода',
+            'details': 'Подробнее',
+            'whyKoreaTitle': 'Почему Корея?',
+            'whyKoreaSubtitle': 'Корейская автомобильная промышленность известна своим качеством, инновациями и стоимостью',
+            'legendaryQualityTitle': 'Легендарное Качество',
+            'legendaryQualityText': '🇰🇷 Известная надежность и качество сборки, выдерживающие испытание временем',
+            'modernTechTitle': 'Современные Технологии',
+            'modernTechText': 'Богатый функционал и передовые технологии даже в базовых комплектациях',
+            'bestPricesTitle': 'Лучшие Цены',
+            'bestPricesText': '📉 Более конкурентоспособные цены по сравнению с европейскими и американскими рынками',
+            'transparentHistoryTitle': 'Прозрачная История',
+            'transparentHistoryText': '💯 Чистая история автомобиля и высокие стандарты обслуживания',
+            'dropshippingTitle': 'Что такое Авто Дропшиппинг?',
+            'dropshippingSubtitle': '💡 Мы исключили посредников и склады. Автомобили доставляются напрямую от корейских продавцов к вам.',
+            'economyTitle': 'Экономия',
+            'economyItem1': 'Без расходов на парковку',
+            'economyItem2': 'Без наценок дилеров',
+            'economyItem3': 'Прямой экспорт = честная цена',
+            'transparencyTitle': 'Прозрачность',
+            'transparencyItem1': 'Доступ к истории перед покупкой',
+            'transparencyItem2': 'Проверка пробега и состояния',
+            'transparencyItem3': 'Полный просмотр документации',
+            'flexibilityTitle': 'Гибкость',
+            'flexibilityItem1': 'Индивидуальные заказы под ваш бюджет',
+            'flexibilityItem2': 'От эконом до премиум моделей',
+            'flexibilityItem3': 'Полная онлайн-транзакция доступна',
+            'convenienceTitle': 'Удобство',
+            'convenienceItem1': 'Персональный менеджер на каждом этапе',
+            'convenienceItem2': 'Фото/видео отчеты, тесты и живое общение',
+            'howItWorksSectionTitle': 'Как всё работает',
+            'howItWorksSectionSubtitle': 'Мы выстроили прозрачную и надёжную систему, чтобы вы могли покупать автомобили из Кореи без рисков и скрытых этапов. Вот как проходит каждый шаг:',
+            'step1Title': 'Вы обращаетесь к менеджеру',
+            'step1Description': 'Связываетесь с нашим специалистом для консультации и обсуждения ваших потребностей в выборе автомобиля.',
+            'step2Title': 'Поиск оптимальных предложений',
+            'step2Description': 'Наши эксперты находят лучшие варианты автомобилей, соответствующие вашему бюджету и требованиям.',
+            'step3Title': 'Согласование и выезд эксперта',
+            'step3Description': 'После выбора подходящих вариантов наш эксперт выезжает для осмотра автомобилей на местах.',
+            'step4Title': 'Первичный осмотр и ваше подтверждение',
+            'step4Description': 'Проводим базовую проверку состояния автомобиля и согласовываем с вами дальнейшие действия.',
+            'step5Title': 'Углублённая диагностика автомобиля',
+            'step5Description': 'Комплексная проверка технического состояния включает:',
+            'step5Item1': '5 детальных видеообзоров',
+            'step5Item2': 'Фотоотчет всех узлов',
+            'step5Item3': 'Компьютерная диагностика',
+            'step5Item4': 'Экспертное заключение',
+            'step6Title': 'Выкуп автомобиля',
+            'step6Description': 'После вашего окончательного согласия оформляем покупку автомобиля у корейского продавца.',
+            'step7Title': 'Отправка и растаможка',
+            'step7Description': 'Организуем доставку автомобиля морским транспортом и проходим все таможенные процедуры.',
+            'step8Title': 'Доставка в ваш город',
+            'step8Description': 'Доставляем автомобиль до вашего города и передаем вам со всеми необходимыми документами.',
+            'step9Title': 'Поддержка на протяжении всей сделки',
+            'step9Description': 'Наши менеджеры всегда на связи, предоставляя полную поддержку на каждом этапе сделки.',
+            'whyChooseUsTitle': '🎯 Почему выбирают нас:',
+            'advantage1': 'Полная прозрачность сделки',
+            'advantage2': 'Работа без посредников',
+            'advantage3': 'Глубокая диагностика',
+            'advantage4': 'Поддержка на всех этапах',
+            'advantage5': 'Экономия до 30%',
+            'ourServicesTitle': 'Наши услуги включают',
+            'service1Title': 'Поиск и инспекция автомобиля',
+            'service1Description': 'Поиск идеального автомобиля, соответствующего вашим требованиям',
+            'service2Title': 'Видеообзор и анализ',
+            'service2Description': 'Детальный видеоосмотр и техническая оценка',
+            'service3Title': 'Поддержка с документацией',
+            'service3Description': 'Полное управление документацией для беспроблемного процесса',
+            'service4Title': 'Таможенное оформление',
+            'service4Description': 'Обработка всех таможенных формальностей и требований',
+            'service5Title': 'Доставка и логистика',
+            'service5Description': 'Безопасная и эффективная транспортировка до вашего местоположения',
+            'service6Title': 'Регистрация автомобиля',
+            'service6Description': 'Руководство по регистрации вашего автомобиля в вашей стране',
+            'carReviewVideoTitle': 'Видеообзор автомобиля',
+            'customerReviewsTitle': 'Отзывы клиентов',
+            'review1Name': 'Наталья П.',
+            'review1Text': '"Очень доволен сервисом! Автомобиль пришел точно в срок, без каких-либо проблем. Менеджер всегда был на связи."',
+            'review2Name': 'Елена С.',
+            'review2Text': '"Прозрачность сделки на высшем уровне. Все этапы были понятны, и я получила именно то, что хотела. Рекомендую!"',
+            'review3Name': 'Алексей П.',
+            'review3Text': '"Отличная компания! Помогли выбрать автомобиль, провели полную диагностику. Очень благодарен за профессионализм."',
+            'review4Name': 'Алексей Д.',
+            'review4Text': '"Быстрая доставка и никаких скрытых платежей. Очень удобно и выгодно. Буду обращаться снова!"',
+            'review5Name': 'Дмитрий В.',
+            'review5Text': '"Сначала сомневался в дропшиппинге, но EasternDrive развеяли все сомнения. Машина в идеальном состоянии. Спасибо!"',
+            'joinUsTitle': 'Присоединяйтесь к нам',
+            'joinUsSubtitle': 'Остались вопросы или хотите увидеть все актуальные предложения первым?<br>Свяжитесь с нашим менеджером — он подскажет лучший вариант под ваш бюджет.<br>Или подпишитесь на наш Telegram-канал, где ежедневно публикуются новые авто, а также советы и инсайты о покупке машин из Кореи.',
+            'writeManagerFooter': 'Написать менеджеру',
+            'telegramChannelFooter': 'Наш Telegram-канал',
+            'benefit1': 'Персональная консультация',
+            'benefit2': 'Свежие предложения ежедневно',
+            'benefit3': 'Эксклюзивные скидки',
+            'footerDescription': 'Сервис дропшиппинга корейских автомобилей',
+            'quickLinksTitle': 'Быстрые ссылки',
+            'catalogFooter': 'Каталог',
+            'howItWorksFooter': 'Как это работает',
+            'faqFooter': 'FAQ',
+            'contactUsTitle': 'Свяжитесь с нами',
+            'copyright': '© 2025 EasternDrive. Все права защищены.',
+            'fullSupportTitle': 'Полная Поддержка',
+            'fullSupportText': 'Обеспечиваем полное сопровождение от выбора до доставки авто',
+            'telegramButton1': 'Самая актуальная информация в нашем Telegram-канале',
+            'telegramButton2': 'Самая актуальная информация в нашем Telegram-канале'
+        },
+        'en': {
+            'catalog': 'Catalog',
+            'advantages': 'Advantages',
+            'howItWorks': 'How It Works',
+            'faq': 'FAQ',
+            'contacts': 'Contacts',
+            'selectCar': 'Select Car',
+            'heroTitle': 'Car Delivery Directly from Korea',
+            'heroSubtitle': 'Save up to 30% on your purchase — no hidden fees or markups',
+            'writeManager': 'Write to Manager',
+            'telegramChannel': 'Our Telegram Channel',
+            'videoReviewText': 'review 16.9',
+            'featuredModelsTitle': 'Featured Models',
+            'newArrival': 'New Arrival',
+            'bestseller': 'Bestseller',
+            'electricCar': 'Electric Car',
+            'engine': 'Engine',
+            'mileage': 'Mileage',
+            'power': 'Power',
+            'transmission': 'Transmission',
+            'battery': 'Battery',
+            'range': 'Range',
+            'details': 'Details',
+            'whyKoreaTitle': 'Why Korea?',
+            'whyKoreaSubtitle': 'The Korean automotive industry is known for its quality, innovation, and value',
+            'legendaryQualityTitle': 'Legendary Quality',
+            'legendaryQualityText': '🇰🇷 Renowned reliability and build quality that stand the test of time',
+            'modernTechTitle': 'Modern Technologies',
+            'modernTechText': 'Rich functionality and advanced technologies even in basic configurations',
+            'bestPricesTitle': 'Best Prices',
+            'bestPricesText': '📉 More competitive prices compared to European and American markets',
+            'transparentHistoryTitle': 'Transparent History',
+            'transparentHistoryText': '💯 Clean vehicle history and high service standards',
+            'dropshippingTitle': 'What is Car Dropshipping?',
+            'dropshippingSubtitle': '💡 We have eliminated intermediaries and warehouses. Cars are delivered directly from Korean sellers to you.',
+            'economyTitle': 'Savings',
+            'economyItem1': 'No parking expenses',
+            'economyItem2': 'No dealer markups',
+            'economyItem3': 'Direct export = fair price',
+            'transparencyTitle': 'Transparency',
+            'transparencyItem1': 'Access to history before purchase',
+            'transparencyItem2': 'Mileage and condition verification',
+            'transparencyItem3': 'Full documentation review',
+            'flexibilityTitle': 'Flexibility',
+            'flexibilityItem1': 'Custom orders for your budget',
+            'flexibilityItem2': 'From economy to premium models',
+            'flexibilityItem3': 'Full online transaction available',
+            'convenienceTitle': 'Convenience',
+            'convenienceItem1': 'Personal manager at every stage',
+            'convenienceItem2': 'Photo/video reports, tests, and live communication',
+            'howItWorksSectionTitle': 'How It Works',
+            'howItWorksSectionSubtitle': 'We have built a transparent and reliable system so you can buy cars from Korea without risks and hidden steps. Here\'s how each step proceeds:',
+            'step1Title': 'You contact the manager',
+            'step1Description': 'Contact our specialist for a consultation and discussion of your car selection needs.',
+            'step2Title': 'Search for optimal offers',
+            'step2Description': 'Our experts find the best car options that match your budget and requirements.',
+            'step3Title': 'Coordination and expert visit',
+            'step3Description': 'After selecting suitable options, our expert visits to inspect the cars on site.',
+            'step4Title': 'Initial inspection and your confirmation',
+            'step4Description': 'We conduct a basic vehicle condition check and coordinate further actions with you.',
+            'step5Title': 'In-depth vehicle diagnostics',
+            'step5Description': 'Comprehensive technical inspection includes:',
+            'step5Item1': '5 detailed video reviews',
+            'step5Item2': 'Photo report of all units',
+            'step5Item3': 'Computer diagnostics',
+            'step5Item4': 'Expert conclusion',
+            'step6Title': 'Vehicle buyout',
+            'step6Description': 'After your final consent, we arrange the purchase of the car from the Korean seller.',
+            'step7Title': 'Shipping and customs clearance',
+            'step7Description': 'We organize car delivery by sea and go through all customs procedures.',
+            'step8Title': 'Delivery to your city',
+            'step8Description': 'We deliver the car to your city and hand it over to you with all necessary documents.',
+            'step9Title': 'Full support throughout the deal',
+            'step9Description': 'Our managers are always in touch, providing full support at every stage of the deal.',
+            'whyChooseUsTitle': '🎯 Why choose us:',
+            'advantage1': 'Full transaction transparency',
+            'advantage2': 'Direct work without intermediaries',
+            'advantage3': 'In-depth diagnostics',
+            'advantage4': 'Support at all stages',
+            'advantage5': 'Save up to 30%',
+            'ourServicesTitle': 'Our services include',
+            'service1Title': 'Car search and inspection',
+            'service1Description': 'Finding the ideal car that meets your requirements',
+            'service2Title': 'Video review and analysis',
+            'service2Description': 'Detailed video inspection and technical evaluation',
+            'service3Title': 'Documentation support',
+            'service3Description': 'Full documentation management for a hassle-free process',
+            'service4Title': 'Customs clearance',
+            'service4Description': 'Handling all customs formalities and requirements',
+            'service5Title': 'Delivery and logistics',
+            'service5Description': 'Safe and efficient transportation to your location',
+            'service6Title': 'Registration assistance',
+            'service6Description': 'Guidance on registering your vehicle in your country',
+            'carReviewVideoTitle': 'Car Review Video',
+            'customerReviewsTitle': 'Customer Reviews',
+            'review1Name': 'Ivan D.',
+            'review1Text': '"Very satisfied with the service! The car arrived on time, without any problems. The manager was always in touch."',
+            'review2Name': 'Elena S.',
+            'review2Text': '"Transaction transparency is top-notch. All stages were clear, and I got exactly what I wanted. Highly recommend!"',
+            'review3Name': 'Alexey P.',
+            'review3Text': '"Great company! Helped choose a car, performed full diagnostics. Very grateful for the professionalism."',
+            'review4Name': 'Maria K.',
+            'review4Text': '"Fast delivery and no hidden fees. Very convenient and profitable. Will definitely use again!"',
+            'review5Name': 'Dmitry V.',
+            'review5Text': '"At first, I doubted dropshipping, but EasternDrive dispelled all doubts. The car is in perfect condition. Thank you!"',
+            'joinUsTitle': 'Join Us',
+            'joinUsSubtitle': 'Still have questions or want to see all current offers first?<br>Contact our manager — he will suggest the best option for your budget.<br>Or subscribe to our Telegram channel, where new cars are published daily, along with tips and insights on buying cars from Korea.',
+            'writeManagerFooter': 'Write to Manager',
+            'telegramChannelFooter': 'Our Telegram Channel',
+            'benefit1': 'Personal consultation',
+            'benefit2': 'Daily fresh offers',
+            'benefit3': 'Exclusive discounts',
+            'footerDescription': 'Korean Car Dropshipping Service',
+            'quickLinksTitle': 'Quick Links',
+            'catalogFooter': 'Catalog',
+            'howItWorksFooter': 'How It Works',
+            'faqFooter': 'FAQ',
+            'contactUsTitle': 'Contact Us',
+            'copyright': '© 2025 EasternDrive. Все права защищены.',
+            'fullSupportTitle': 'Full Support',
+            'fullSupportText': 'We provide full support from car selection to delivery',
+            'telegramButton1': 'Most up-to-date information in our Telegram channel',
+            'telegramButton2': 'Most up-to-date information in our Telegram channel'
+        }
+    };
+
+    function updateContentLanguage(lang) {
+        // Update HTML lang attribute
+        htmlElement.lang = lang;
+
+        // Update language toggle display
+        const currentFlagSpan = languageToggle.querySelector('[data-lang-flag]');
+        const currentTextSpan = languageToggle.querySelector('[data-lang-text]');
+        if (currentFlagSpan && currentTextSpan) {
+            currentFlagSpan.className = `flag flag-${lang}`;
+            currentTextSpan.textContent = lang.toUpperCase(); // Display EN, RU, etc.
+            currentFlagSpan.setAttribute('data-lang-flag', lang);
+            currentTextSpan.setAttribute('data-lang-text', lang);
+        }
+
+        // Update all elements with data-lang-key
+        document.querySelectorAll('[data-lang-key]').forEach(element => {
+            const key = element.getAttribute('data-lang-key');
+            if (translations[lang] && translations[lang][key]) {
+                // For elements that might contain HTML (like subtitles), use innerHTML
+                if (key.includes('Subtitle') || key.includes('Description')) {
+                    element.innerHTML = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            }
+        });
+    }
+
+    function closeDropdown(event) {
+        if (!event.target.closest('.language-selector')) {
+            languageDropdown.classList.remove('active');
+        }
+    }
+
+    languageToggle.addEventListener('click', function(event) {
+        event.stopPropagation();
+        languageDropdown.classList.toggle('active');
+    });
+
+    document.addEventListener('click', closeDropdown);
+
+    const languageOptions = languageDropdown.querySelectorAll('a[data-lang]');
+    languageOptions.forEach(option => {
+        option.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            const selectedLang = this.getAttribute('data-lang');
+            updateContentLanguage(selectedLang);
+            languageDropdown.classList.remove('active'); // Close dropdown after selection
+        });
+    });
+
+    // Initial language setup based on html lang attribute or default to Russian
+    updateContentLanguage(htmlElement.lang || 'ru');
+
+    // Play/Pause button for intro video
+    const introVideo = document.getElementById('introVideo');
+    const playPauseButton = document.getElementById('playPauseButton');
+
+    if (introVideo && playPauseButton) {
+        playPauseButton.addEventListener('click', function() {
+            if (introVideo.paused) {
+                introVideo.play();
+                playPauseButton.querySelector('i').className = 'ri-pause-fill';
+            } else {
+                introVideo.pause();
+                playPauseButton.querySelector('i').className = 'ri-play-fill';
+            }
+        });
+
+        // Update button icon when video state changes (e.g., if autoplay is blocked and user plays it)
+        introVideo.addEventListener('play', () => {
+            playPauseButton.querySelector('i').className = 'ri-pause-fill';
+        });
+        introVideo.addEventListener('pause', () => {
+            playPauseButton.querySelector('i').className = 'ri-play-fill';
+        });
+
+        // Initial state of the button icon
+        if (introVideo.paused) {
+            playPauseButton.querySelector('i').className = 'ri-play-fill';
+        } else {
+            playPauseButton.querySelector('i').className = 'ri-pause-fill';
+        }
+    }
+
+    // --- Feedback Videos functionality ---
+    document.querySelectorAll('.feedback-video-container').forEach(container => {
+        const video = container.querySelector('video');
+        const playButton = container.querySelector('.feedback-play-button');
+
+        if (video && playButton) {
+            // Hide play button when video starts playing
+            video.addEventListener('play', () => {
+                playButton.classList.add('hidden');
+            });
+
+            // Show play button when video is paused or ended
+            video.addEventListener('pause', () => {
+                playButton.classList.remove('hidden');
+            });
+            video.addEventListener('ended', () => {
+                playButton.classList.remove('hidden');
+            });
+
+            // Toggle play/pause on button click
+            playButton.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+
+            // Show play button initially if video is not playing (e.g., not autoplaying)
+            if (video.paused || video.ended) {
+                playButton.classList.remove('hidden');
+            } else {
+                playButton.classList.add('hidden');
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>
