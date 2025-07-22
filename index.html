@@ -470,7 +470,7 @@ margin-right: 6px;
 </div>
 <div class="relative w-full aspect-video md:w-auto md:h-auto flex justify-center items-center">
     <!-- Видео intro.mp4 теперь со звуком и без muted -->
-    <video id="introVideo" controls loop playsinline preload="auto" class="w-full h-full object-cover rounded-lg shadow-xl">
+    <video id="introVideo" controls loop playsinline preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Video+Preview" class="w-full h-full object-cover rounded-lg shadow-xl">
         <source src="intro.mp4" type="video/mp4">
         Ваш браузер не поддерживает тег video.
     </video>
@@ -490,7 +490,7 @@ margin-right: 6px;
 <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
 <div class="relative">
 <!-- Видео car1.mp4 -->
-<video controls loop playsinline preload="auto" class="w-full h-64 object-cover object-top">
+<video controls loop playsinline preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Car+1+Preview" class="w-full h-64 object-cover object-top">
     <source src="car1.mp4" type="video/mp4">
     Ваш браузер не поддерживает видео.
 </video>
@@ -512,7 +512,7 @@ margin-right: 6px;
 <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
 <div class="relative">
 <!-- Видео car2.mp4 -->
-<video controls loop playsinline preload="auto" class="w-full h-64 object-cover object-top">
+<video controls loop playsinline preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Car+2+Preview" class="w-full h-64 object-cover object-top">
     <source src="car2.mp4" type="video/mp4">
     Ваш браузер не поддерживает видео.
 </video>
@@ -535,7 +535,7 @@ margin-right: 6px;
 <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:shadow-lg hover:-translate-y-1">
 <div class="relative">
 <!-- Видео car3.mp4 -->
-<video controls loop playsinline preload="auto" class="w-full h-64 object-cover object-top">
+<video controls loop playsinline preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Car+3+Preview" class="w-full h-64 object-cover object-top">
     <source src="car3.mp4" type="video/mp4">
     Ваш браузер не поддерживает видео.
 </video>
@@ -906,7 +906,7 @@ margin-right: 6px;
         <h2 class="text-3xl font-bold text-center mb-12" data-lang-key="carReviewVideoTitle">Видеообзор автомобиля</h2>
         <div class="max-w-full mx-auto bg-white rounded-lg shadow-md overflow-hidden">
             <div style="position: relative; padding-bottom: 56.25%; height: 0;"> <!-- 16:9 Aspect Ratio -->
-                <video controls preload="auto" class="absolute top-0 left-0 w-full h-full rounded-lg">
+                <video controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Review+Video+Preview" class="absolute top-0 left-0 w-full h-full rounded-lg">
                     <source src="review.mp4" type="video/mp4">
                     Ваш браузер не поддерживает тег video.
                 </video>
@@ -922,7 +922,7 @@ margin-right: 6px;
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo1" controls preload="auto">
+                    <video id="feedbackVideo1" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+1+Preview">
                         <source src="feedback1.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -930,12 +930,12 @@ margin-right: 6px;
                         <i class="ri-play-fill"></i>
                     </button>
                 </div>
-                <h3 class="font-bold text-lg mb-2 mt-4" data-lang-key="review1Name">Наталья Н.</h3>
-                <p class="text-gray-600" data-lang-key="review1Text">"Очень доволена сервисом! Автомобиль пришел точно в срок, без каких-либо проблем. Менеджер всегда был на связи."</p>
+                <h3 class="font-bold text-lg mb-2 mt-4" data-lang-key="review1Name">Иван Д.</h3>
+                <p class="text-gray-600" data-lang-key="review1Text">"Очень доволен сервисом! Автомобиль пришел точно в срок, без каких-либо проблем. Менеджер всегда был на связи."</p>
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo2" controls preload="auto">
+                    <video id="feedbackVideo2" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+2+Preview">
                         <source src="feedback2.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -948,7 +948,7 @@ margin-right: 6px;
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo3" controls preload="auto">
+                    <video id="feedbackVideo3" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+3+Preview">
                         <source src="feedback3.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -961,7 +961,7 @@ margin-right: 6px;
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo4" controls preload="auto">
+                    <video id="feedbackVideo4" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+4+Preview">
                         <source src="feedback4.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -969,12 +969,12 @@ margin-right: 6px;
                         <i class="ri-play-fill"></i>
                     </button>
                 </div>
-                <h3 class="font-bold text-lg mb-2 mt-4" data-lang-key="review4Name">Алексей Д.</h3>
+                <h3 class="font-bold text-lg mb-2 mt-4" data-lang-key="review4Name">Мария К.</h3>
                 <p class="text-gray-600" data-lang-key="review4Text">"Быстрая доставка и никаких скрытых платежей. Очень удобно и выгодно. Буду обращаться снова!"</p>
             </div>
             <div class="bg-gray-50 p-6 rounded-lg shadow-sm text-center">
                 <div class="feedback-video-container">
-                    <video id="feedbackVideo5" controls preload="auto">
+                    <video id="feedbackVideo5" controls preload="auto" poster="https://placehold.co/600x400/000000/FFFFFF?text=Feedback+5+Preview">
                         <source src="feedback5.mp4" type="video/mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
@@ -1312,13 +1312,13 @@ document.addEventListener('DOMContentLoaded', function() {
             'service6Description': 'Руководство по регистрации вашего автомобиля в вашей стране',
             'carReviewVideoTitle': 'Видеообзор автомобиля',
             'customerReviewsTitle': 'Отзывы клиентов',
-            'review1Name': 'Наталья П.',
+            'review1Name': 'Иван Д.',
             'review1Text': '"Очень доволен сервисом! Автомобиль пришел точно в срок, без каких-либо проблем. Менеджер всегда был на связи."',
             'review2Name': 'Елена С.',
             'review2Text': '"Прозрачность сделки на высшем уровне. Все этапы были понятны, и я получила именно то, что хотела. Рекомендую!"',
             'review3Name': 'Алексей П.',
             'review3Text': '"Отличная компания! Помогли выбрать автомобиль, провели полную диагностику. Очень благодарен за профессионализм."',
-            'review4Name': 'Алексей Д.',
+            'review4Name': 'Мария К.',
             'review4Text': '"Быстрая доставка и никаких скрытых платежей. Очень удобно и выгодно. Буду обращаться снова!"',
             'review5Name': 'Дмитрий В.',
             'review5Text': '"Сначала сомневался в дропшиппинге, но EasternDrive развеяли все сомнения. Машина в идеальном состоянии. Спасибо!"',
